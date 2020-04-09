@@ -35,7 +35,7 @@
 
 <td>${item.lastname}</td>
 
-<td><a href="show/${item["id"]}">Show</a></td>
+<td><a href="details/${item["id"]}">Show</a></td>
 
 <td>
 

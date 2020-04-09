@@ -1,4 +1,4 @@
-<#import "/spring.ftl"as spring/>
+<#import "/spring.ftl" as spring/>
 
 <head>
  <meta charset="utf-8"/>
@@ -11,14 +11,14 @@
 <body>
 	<h1>${page}</h1>
 	
-	<form action ="<@spring.url '/products/create'/> method="POST" name="product">
+	<form action="<@spring.url '/products/create'/>" method="POST">
 		Name:<br>
 		<input type="text" name="name" value="">
 		<br>
 		Price:<br>
-		<input type="text" name="price" value="">
+		<input type="number" name="price" value="">
 		<br><br>
 		
-		<input type="submit" value="submit">
+		<input type="submit" value="Submit">
 	</form>
 </body>

@@ -9,6 +9,4 @@
 </head>
 
 <body>
-	<h1>${page}</h1>
-
 </body>

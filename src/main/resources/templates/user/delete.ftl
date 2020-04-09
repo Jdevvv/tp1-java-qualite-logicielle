@@ -1,4 +1,4 @@
-<#import "/spring.ftl" as spring/>
+<#import "/spring.ftl"as spring/>
 
 <head>
  <meta charset="utf-8"/>
@@ -9,16 +9,5 @@
 </head>
 
 <body>
-	<h1>${page}</h1>
-	
-	<form action="<@spring.url '/users/create'/>" method="POST">
-		Firstname:<br>
-		<input type="text" name="firstname" value="">
-		<br>
-		Lastname:<br>
-		<input type="text" name="lastname" value="">
-		<br><br>
-		
-		<input type="submit" value="submit">
-	</form>
+
 </body>

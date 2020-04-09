@@ -1,18 +1,12 @@
 package com.tactfactory.monprojetsb.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.tactfactory.monprojetsb.entities.User;
 import com.tactfactory.monprojetsb.repositories.UserRepository;
@@ -35,14 +29,30 @@ public class UserController {
 	 @GetMapping(value = {"/create"})
 	 public String createGet(Model model) {
 		 model.addAttribute("page", "User create");
-		 return"user/create";
+		 return "user/create";
 	 }
 
-	 @PostMapping(value={"/create"})
+	 @PostMapping(value = {"/create"})
 	 public String createPost(@ModelAttribute User user) {
 		 if (user != null) {
 			 repository.save(user);
 		 }
 		 return "redirect:index";
 	 }
+	 
+	 @GetMapping("/details/{id}")
+	    public String details(@ModelAttribute User user, Model model) {
+			model.addAttribute("page", "User details");
+	        model.addAttribute("item", repository.findById(user.getId()).get());
+	        
+	        return "user/details";
+	    }
+	 
+	 @PostMapping("/delete")
+		public String delete(Long id) {
+			User user = repository.getOne(id);
+			repository.delete(user);
+			
+			return "redirect:index";
+		}
 }
