@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.21.0" timestamp="2020-04-09T16:30:24.880">
+<file name="C:\Users\Jérémy Llanta\eclipse-workspace\tp1-java-qualite-logicielle\src\main\java\com\tactfactory\monprojetsb\controllers\ProductController.java">
+<violation beginline="19" endline="19" begincolumn="35" endcolumn="44" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="com.tactfactory.monprojetsb.controllers" class="ProductController" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="C:\Users\Jérémy Llanta\eclipse-workspace\tp1-java-qualite-logicielle\src\main\java\com\tactfactory\monprojetsb\controllers\UserController.java">
+<violation beginline="19" endline="19" begincolumn="32" endcolumn="41" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="com.tactfactory.monprojetsb.controllers" class="UserController" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+</pmd>
